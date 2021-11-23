@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from "react-redux";
 import SigninPage from "./pages/SigninPage";
 import RegisterPage from "./pages/RegisterPage";
 import { signout } from "./actions/userActions";
+import ShippingAddressPage from "./pages/ShippingAddressPage";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -60,6 +61,7 @@ function App() {
           <Route path="/signin" component={SigninPage} />
           <Route path="/register" component={RegisterPage} />
           <Route path="/product/:id" component={ProductPage} />
+          <Route path="/shipping" component={ShippingAddressPage} />
         </main>
         <footer className="row center">All right reserved</footer>
       </div>
