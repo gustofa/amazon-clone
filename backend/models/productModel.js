@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 
-// eslint-disable-next-line no-unused-vars
 const productSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, unique: true },
