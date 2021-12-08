@@ -43,6 +43,20 @@ orderRouter.get(
   })
 );
 
+orderRouter.get(
+  "/mine",
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const orders = await Order.find({ user: req.user._id });
+    //const orders = await Order.find("");
+    res.send(orders);
+  })
+);
+
+//console.log("dentro de orderrouter /user   ", req.user);
+//const orders = await Order.find({ "user._id": "618256f74a25ef01758b5d3b" }); //req.user._id
+//const orders = await Order.find({});
+
 orderRouter.put(
   "/:id/pay",
   isAuth,
