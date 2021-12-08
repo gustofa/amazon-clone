@@ -4,7 +4,9 @@ import productRouter from "./routers/productRouter.js";
 import userRouter from "./routers/userRouter.js";
 import orderRouter from "./routers/orderRouter.js";
 import dotenv from "dotenv";
-import path from "path";
+//import path from "path";
+
+var path = require("path");
 
 dotenv.config();
 const app = express();
