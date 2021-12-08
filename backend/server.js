@@ -1,6 +1,6 @@
-import http from "http";
-import { Server } from "socket.io";
 import express from "express";
+import { createServer } from "http"; //http
+import { Server } from "socket.io";
 import mongoose from "mongoose";
 import productRouter from "./routers/productRouter.js";
 import userRouter from "./routers/userRouter.js";
@@ -37,7 +37,7 @@ app.use((err, req, res, next) => {
 
 const port = process.env.PORT || 5000;
 
-const httpServer = http.Server(app);
+const httpServer = createServer(app);
 const io = new Server(httpServer, { cors: { origin: "*" } });
 const users = [];
 
