@@ -91,8 +91,8 @@ export const payOrder =
     }
   };
 
-export const listOrderMine = (userId) => async (dispatch, getState) => {
-  dispatch({ type: ORDER_MINE_LIST_REQUEST, payload: userId });
+export const listOrderMine = () => async (dispatch, getState) => {
+  dispatch({ type: ORDER_MINE_LIST_REQUEST });
   const {
     userSignin: { userInfo },
   } = getState();
